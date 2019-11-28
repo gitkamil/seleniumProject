@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "Id": {
+              "type": "integer"
+            },
+            "Role": {
+              "type": "string"
+            },
+            "Status": {
+              "type": "string"
+            },
+            "Username": {
+              "type": "string"
+            },
+            "FirstName": {
+              "type": "string"
+            },
+            "LastName": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Id",
+            "Role",
+            "Status",
+            "Username",
+            "FirstName",
+            "LastName"
+          ]
+        }
+      ]
+    },
+    "Success": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "Data",
+    "Success"
+  ]
+}
