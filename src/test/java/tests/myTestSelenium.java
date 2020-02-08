@@ -41,7 +41,7 @@ public class myTestSelenium {
         searchBox.submit();
 
         WebElement passwordBox = driver.findElement(By.name("password"));
-        passwordBox.sendKeys("Ktoscos123@");
+        passwordBox.sendKeys("");
         passwordBox.submit();
 //
 //
@@ -71,7 +71,7 @@ public class myTestSelenium {
         Login loginPage = startPage.submit();
 
         loginPage.setUserName("gitKamil");
-        loginPage.setPassword("Ktoscos123@");
+        loginPage.setPassword("");
         loginPage.submit();
 
     }
