@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "org.sonarqube" version "2.8"
 }
 
 group 'edu.kamil'
@@ -10,7 +11,15 @@ sourceCompatibility = 1.8
 repositories {
     mavenCentral()
 }
-
+sonarqube {
+    properties {
+        property "sonar.projectKey", "gitkamil_seleniumProject"
+        property "sonar.organization", "gitkamil"
+        property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.login", "b76cd490591da4378319d175e893f84b7bfacfa4"
+        property "sonar.test.inclusions", "**/*Test*/**"
+    }
+}
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     testCompile 'io.rest-assured:rest-assured:3.0.2'
