@@ -2,18 +2,17 @@ package tests;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import pages.Login;
-import pages.StartPage;
+import app.Login;
+import app.StartPage;
 
 public class myTestSelenium {
     //how to create correct profile https://stackoverflow.com/questions/50635087/how-to-open-a-chrome-profile-through-user-data-dir-argument-of-selenium
 // profil will works only when all instances of chrome will be closed
-    @Test
+    //@Test
     public void testGoogleSearch() throws InterruptedException {
         // Optional. If not specified, WebDriver searches the PATH for chromedriver.
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Kamil\\Downloads\\chromedriver_win32\\chromedriver.exe");
@@ -71,7 +70,7 @@ public class myTestSelenium {
         Login loginPage = startPage.submit();
 
         loginPage.setUserName("gitKamil");
-        loginPage.setPassword("");
+        loginPage.setPassword("Ktoscos123@");
         loginPage.submit();
 
     }

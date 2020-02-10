@@ -1,4 +1,4 @@
-package pages;
+package app;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.Assert.assertTrue;
 
-public class Login {
+public class page {
 
     WebDriver driver;
 
@@ -18,7 +18,7 @@ public class Login {
     private WebElement passwordBox;
 
 
-    public Login(WebDriver driver) {
+    public page(WebDriver driver) {
 
         this.driver = driver;
         PageFactory.initElements(driver, this);

@@ -1,15 +1,33 @@
 package tests;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+
+import mappers.MyObjectMapper;
 import org.junit.Test;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.time.LocalDate;
+import java.util.Date;
 
 import static io.restassured.RestAssured.*;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 
+
 public class MyTest {
 
+    @Test
+public void myMapperTest() throws IOException {
+    ObjectMapper mapper = new ObjectMapper();
+   MyObjectMapper a = new MyObjectMapper().setEmail("");
+
+    mapper.writeValue( new FileOutputStream("C:\\Users\\Kamil\\repo\\seleniumProject\\src\\test\\resources\\output-2.json"),a);
+
+}
     //@Test
     public void test_NumberOfCircuitsFor2017Season_ShouldBe20() {
 

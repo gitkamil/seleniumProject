@@ -1,4 +1,4 @@
-package pages;
+package app;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,7 +21,7 @@ public class StartPage {
 
 
     public Login submit() {
-      //  logInLink.click();
+        logInLink.click();
         return new Login(driver);
     }
 }
